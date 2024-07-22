@@ -5,22 +5,22 @@ import com.developers.Backend.Devlopment.Entity.Employee;
 
 public class EmployeeMapper {
 
-    public static EmployeeDto maptoEmployee(Employee employee){
+    public static Employee maptoEmployee(EmployeeDto employeeDto){
 
-       return  new EmployeeDto(
-               employee.getId(),
-               employee.getFirstName(),
-               employee.getLastName(),
-               employee.getEmail()
+       return  new Employee(
+               employeeDto.getId(),
+               employeeDto.getFirstName(),
+               employeeDto.getLastName(),
+               employeeDto.getEmail()
        );
     }
 
-    public static Employee mapToEmployeeDto(EmployeeDto employeeDto){
-        return new Employee(
-                employeeDto.getId(),
-                employeeDto.getFirstName(),
-                employeeDto.getLastName(),
-                employeeDto.getEmail()
+    public static EmployeeDto mapToEmployeeDto(Employee employee){
+        return new EmployeeDto(
+                employee.getId(),
+                employee.getFirstName(),
+                employee.getLastName(),
+                employee.getEmail()
         );
     }
 }
